@@ -1,7 +1,14 @@
+#Autor: Edwin Quintero
+#language:en
+
+@regression
 Feature: login test
 
-  Scenario Outline: testing the successful login
+  Background:
     Given the user is on the serenity demo page
+
+  @successlogin
+  Scenario Outline: testing the successful login
     When attempts to log in
       | user   | pass   |
       | <user> | <pass> |
